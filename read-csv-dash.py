@@ -1312,7 +1312,7 @@ def run_dashboard():
         gantt_stats = build_gantt_stats(night_value, gantt_data, agg)
         return fig, gantt_stats
 
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
 
 if __name__ == "__main__":
     run_dashboard()
