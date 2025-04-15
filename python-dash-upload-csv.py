@@ -1414,7 +1414,7 @@ def run_dashboard():
         else:
             return {"backgroundColor": "#f8f9fa", "color": "black", "minHeight": "100vh"}
     
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8050)))
 
 if __name__ == "__main__":
     run_dashboard()
